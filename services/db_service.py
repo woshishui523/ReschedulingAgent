@@ -1,6 +1,8 @@
 # services/db_service.py
 from config.database import SessionLocal
 from models.delay_record import DelayRecord
+from models.train_model import TrainModel
+from models.station import Station
 
 # 插入数据（对应你智能体）
 def add_delay_record(train_id, station_id, duration, reason, is_urgent=0):
@@ -35,5 +37,23 @@ def get_latest_delay_record():
     db = SessionLocal()
     try:
         return db.query(DelayRecord).order_by(DelayRecord.delay_id.desc()).first()
+    finally:
+        db.close()
+
+
+# 查询列车信息
+def get_train_by_number(train_number: str):
+    db = SessionLocal()
+    try:
+        return db.query(TrainModel).filter(TrainModel.train_number == train_number).first()
+    finally:
+        db.close()
+
+
+# 查询车站信息
+def get_station_by_name(station_name: str):
+    db = SessionLocal()
+    try:
+        return db.query(Station).filter(Station.station_name == station_name).first()
     finally:
         db.close()
