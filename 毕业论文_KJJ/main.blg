@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: Biblio/gbt7714-unsrt.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: Biblio/ref.bib
+Warning--I didn't find a database entry for "Kang2024TITS"
+Warning--I didn't find a database entry for "b22"
+Warning--I didn't find a database entry for "b21"
+Warning--I didn't find a database entry for "b11"
+Warning--I didn't find a database entry for "b23"
+Warning--I didn't find a database entry for "b44"
+Warning--I didn't find a database entry for "b18"
+Warning--I didn't find a database entry for "b17"
+Warning--I didn't find a database entry for "b45"
+Warning--I didn't find a database entry for "Moaveni2018"
+Warning--I didn't find a database entry for "Khosrosereshki2021"
+Warning--I didn't find a database entry for "Yan2016"
+Warning--I didn't find a database entry for "Xu2016"
+Warning--I didn't find a database entry for "Xu2016a"
+Warning--I didn't find a database entry for "Tanaka1992"
+You've used 116 entries,
+            3610 wiz_defined-function locations,
+            1559 strings with 30847 characters,
+and the built_in function-call counts, 735011 in all, are:
+= -- 10491
+> -- 85059
+< -- 111459
++ -- 30185
+- -- 1276
+* -- 5969
+:= -- 102848
+add.period$ -- 400
+call.type$ -- 116
+change.case$ -- 536
+chr.to.int$ -- 27611
+cite$ -- 116
+duplicate$ -- 2332
+empty$ -- 8765
+format.name$ -- 2065
+if$ -- 187833
+int.to.chr$ -- 6
+int.to.str$ -- 117
+missing$ -- 0
+newline$ -- 641
+num.names$ -- 348
+pop$ -- 39678
+preamble$ -- 1
+purify$ -- 116
+quote$ -- 0
+skip$ -- 75770
+stack$ -- 0
+substring$ -- 35091
+swap$ -- 377
+text.length$ -- 1109
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1225
+warning$ -- 0
+while$ -- 1578
+width$ -- 0
+write$ -- 1893
+(There were 15 warnings)

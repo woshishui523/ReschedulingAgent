@@ -1,0 +1,42 @@
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 本文研究内容组织结构图}}{12}{figure.caption.11}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 双线城际高速铁路的两种单线环形线路模型}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 列车运行演化示意图}}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 名义时刻表（虚线）与FCFS策略下的实际时刻表（实线）}}{32}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 案例1中的闭环列车运行图}}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 名义时刻表恢复控制器与MIP方法下列车2–5的出发延误演化图}}{34}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 案例2中的闭环列车运行图}}{36}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 规律发车间隔控制器与MIP方法下发车间隔方差演化图}}{37}{figure.caption.19}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 城际高速铁路线路结构示意图}}{39}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 京津城际高速铁路一日客流分布}}{41}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 客流分布的正态拟合}}{42}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 名义时刻表（虚线）与 FCFS 方法实际运行图（实线）}}{49}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 名义时刻表（虚线）与终点站时间裕度法实际运行图（实线）}}{50}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 鲁棒 MPC 方法生成的重调度列车运行图}}{50}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 列车 2–5 在各站的出发延误演化对比（FCFS vs 鲁棒 MPC）}}{51}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces 状态反馈控制器重调度结果}}{52}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces MIP 方法重调度结果}}{52}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 鲁棒 MPC 方法重调度结果}}{53}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 三种方法的列车延误演化对比}}{53}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces 鲁棒 MPC 控制量随时间演化}}{54}{figure.caption.34}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 图定时刻表（虚线）与 FCFS 方法下的实际运行图（实线）}}{71}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 迭代学习模型预测控制方法生成的重调度列车运行图}}{71}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 系统总列车延误时间随迭代次数的演化曲线}}{72}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 状态反馈、MPC、IL-MPC 与 MIP 方法在各车站的总延误时间对比}}{72}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 各批次中控制量最大绝对值变化曲线}}{73}{figure.caption.41}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 客流量的隶属度函数}}{90}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 名义时刻表图（虚线）与实际时刻表（实线）}}{91}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 由迭代模型预测控制方法给出的重调度列车图}}{92}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 由迭代学习模糊预测控制方法给出的重调度列车图}}{93}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 各站 RMPC、IL-MPC 和 MIP 方法及 ILFPC 的总列车延误时间演化图}}{94}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces 总列车延误时间演化图}}{94}{figure.caption.50}%
+\addvspace {10.0pt}
+\addvspace {10.0pt}

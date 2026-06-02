@@ -1,40 +1,34 @@
-import uuid
-from datetime import datetime
+# tools/generate_dispatch_command.py
+import json
+from langchain_core.tools import Tool
+from services.delay_service import process_delay_event
 
 
-def generate_dispatch_command(data):
+def generate_dispatch_command_tool(train_number: str, station_name: str, duration: int, reason: str) -> str:
     """
-    根据解析的数据生成调度命令。
+    生成调度命令的工具函数
 
-    输入：
-        data (dict): 解析出的结构化数据，包括列车编号、车站、晚点时长等
+    参数:
+        train_number: 车次号
+        station_name: 车站名称
+        duration: 晚点时长（分钟）
+        reason: 晚点原因
 
-    输出：
-        dict: 调度命令（命令编号，列车编号，命令类型，命令内容等）
+    返回:
+        调度命令字符串
     """
-    command_id = str(uuid.uuid4())  # 生成唯一命令ID
-    train_number = data["train_number"]
-    station_name = data["station_name"]
-    delay_duration = data["delay_duration"]
-    is_urgent = data["is_urgent"]
+    try:
+        command = process_delay_event(train_number, station_name, duration, reason)
+        return f"调度命令生成成功：\n{command}"
+    except Exception as e:
+        return f"调度命令生成失败：{str(e)}"
 
-    # 根据晚点时间生成调度命令
-    if delay_duration > 10:
-        command_type = "调整发车时间"
-        command_content = f"{train_number}次列车在{station_name}晚点{delay_duration}分钟，建议延后发车{delay_duration - 10}分钟"
-    else:
-        command_type = "无需调整"
-        command_content = f"{train_number}次列车在{station_name}晚点{delay_duration}分钟，建议维持原发车时间"
 
-    # 创建调度命令
-    dispatch_command = {
-        "command_id": command_id,
-        "train_number": train_number,
-        "station_name": station_name,
-        "command_type": command_type,
-        "command_content": command_content,
-        "status": "待处理",
-        "issued_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    }
+dispatch_command_tool = Tool(
+    name="DispatchCommandGenerator",
+    func=lambda input_str: generate_dispatch_command_tool(
+        **json.loads(input_str)
+    ),
+    description="根据列车晚点信息生成调度命令。输入参数格式：JSON 字符串，包含 train_number(车次号), station_name(车站名), duration(晚点分钟数), reason(晚点原因)"
+)
 
-    return dispatch_command

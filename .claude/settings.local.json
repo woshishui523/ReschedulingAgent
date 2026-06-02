@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile *)",
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(pip install *)",
+      "Bash(pip uninstall *)",
+      "Bash(pip *)",
+      "Bash(python *)",
+      "Bash(where python *)",
+      "Bash(where *)",
+      "Bash(git *)",
+      "Bash(mkdir *)",
+      "Bash(rm *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(xelatex *)",
+      "Bash(pdflatex *)",
+      "Bash(bibtex *)",
+      "Bash(biber *)",
+      "Bash(latexmk *)",
+      "Bash(bash *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "Bash(conda info *)",
+      "Bash(conda run *)",
+      "Bash(D:\\\\\\\\Anaconda\\\\\\\\condabin\\\\\\\\conda.bat run *)",
+      "Bash(C:\\\\\\\\Users\\\\\\\\10641\\\\\\\\miniconda3\\\\\\\\python.exe *)",
+      "Bash(/d/Anaconda/envs/dispatch_llm/python.exe -c \"import sqlalchemy, pymysql, langchain, dashscope, cvxpy, fastapi, numpy, matplotlib; print\\('dispatch_llm: ALL OK'\\)\")",
+      "Read(//c/Users/10641/miniconda3/envs//**)",
+      "Bash(/c/Users/10641/miniconda3/envs/ReschedulingAgent/python.exe -c \"import sqlalchemy, pymysql, langchain, dashscope, cvxpy, fastapi, numpy, matplotlib; print\\('ReschedulingAgent: ALL OK'\\)\")"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-from langchain.tools import Tool
+from langchain_core.tools import Tool
 from services.db_service import add_delay_record
 from tools.nlp_parser_tool import parse_dispatch_text
 from tools.db_query_tool import query_train_info, query_station_info

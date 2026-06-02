@@ -1,0 +1,54 @@
+% !TEX ROOT = ../Thesis.tex 
+%-
+%-> 中文摘要
+%-
+\chapter{摘\quad 要}\chaptermark{摘\quad 要}% 摘要标题
+% \setcounter{page}{1}% 开始页码
+% \pagenumbering{Roman}% 页码符号
+% 22p / 12p = 1.83
+\linespread{1.5}
+\zihao{-4}
+% \setlength{\baselineskip}{20pt}
+随着高速铁路网络向高密度、公交化和智能化方向快速发展，列车运行控制系统对实时性、鲁棒性与自适应性的要求日益提高。
+在复杂的高速铁路运行系统中，列车运行状态本身具有一定不确定性。同时，外部环境扰动也会显著影响运行秩序。其中，由客流波动引起的停站时间变化，已成为影响列车准点率的重要因素之一。 为保障城际高铁在高频率周期化运营下的高效稳定运行，亟需构建能够有效应对客流不确定性、突变性及统计规律性的实时重调度机制。然而，现有调度方法普遍存在对客流扰动建模不足、鲁棒性与学习能力难以兼顾、以及多工况适应性有限等问题，尤其在面对半稳态或突发性客流干扰时，难以同时保证调度决策的稳定性、实时性与优化性能。针对上述挑战，本研究基于先进控制理论，融合状态空间建模、鲁棒模型预测控制、迭代学习机制与模糊逻辑方法，提出了一套面向不确定与突变客流的城际高铁列车实时重调度方法体系，旨在解决高密度运行场景下列车延误抑制与快速恢复的核心难题，为提升智能轨道交通系统的自主调控能力提供理论支撑与技术路径。本文的主要工作和创新总结如下：
+
+1)面向M>N场景的状态空间建模方法：针对城际高铁“列车数大于车站数”（M>N）的独特运行特征，首次构建了融合客流扰动的离散事件触发状态空间模型。通过将客流引入停站时间动态，并定义包含多车耦合关系的状态向量，实现了对列车发车偏差演化的精确刻画，为后续控制策略提供了统一且可扩展的建模基础。
+
+2)考虑客流不确定性的鲁棒模型预测控制（RMPC）：针对客流扰动具有有界但未知特性的场景，设计了一种基于线性矩阵不等式（LMI）的鲁棒MPC控制器。通过引入H∞性能指标与Lyapunov稳定性约束，在最坏扰动情形下仍能保证系统稳定、安全间隔满足，并实现延误快速收敛，显著提升了调度策略在随机客流波动下的抗扰能力。
+
+3)面向客流突变的迭代学习控制（ILC）机制：针对周期性运营中可重复出现的客流突变（如早晚高峰），提出了一种基于批次运行的迭代学习重调度框架。通过在每次循环结束后更新控制输入，逐步消除由结构性客流偏差引起的累积延误，实现了跨周期性能的持续优化，有效弥补了单次鲁棒控制的保守性。
+
+4)融合客流感知的自适应预测控制（IL-FPC）：为有效应对轨道交通中多变的客流干扰并提升运营效率，提出了一种结合T-S模糊建模与迭代学习机制的智能控制方法。该方法依托历史客流数据对系统运行状态进行辨识与分类，根据不同场景的特点动态匹配相应的局部预测控制器，并利用迭代学习算法在周期性运行中不断修正控制律，从而实现了针对复杂、多模态客流环境的自适应调节与列车运行计划的精准跟踪。
+
+本研究围绕“建模—鲁棒—学习—融合”四个层次，构建了从基础动态描述到高级智能调度的完整技术链条，有效解决了客流扰动下城际高铁列车重调度的稳定性、实时性与自适应性协同优化难题。通过在京-津城际铁路场景下的仿真实验与多方法对比，验证了所提方法在总延误抑制、恢复速度、计算效率及多工况适应性等方面的综合优势，为未来高韧性、智能化的轨道交通运行控制提供了新的理论框架与实践方案。
+
+
+
+
+
+\keywords{城际高速铁路；列车重调度；客流扰动；鲁棒模型预测控制；迭代学习控制；模糊控制}% 中文关键词
+%-
+%-> 英文摘要
+%-
+\chapter{Abstract}\chaptermark{Abstract}% 摘要标题
+
+
+With the rapid development of high-speed railway networks toward high-density, bus-like, and intelligent operations, train operation control systems are facing increasingly stringent demands for real-time performance, robustness, and adaptability. In such complex dynamical systems, external disturbances—particularly passenger-flow-induced dwell time variations—have become critical factors affecting punctuality and operational stability, in addition to inherent uncertainties in train dynamics. To ensure efficient and stable operation under high-frequency cyclic scheduling, there is an urgent need for real-time rescheduling mechanisms capable of effectively handling the uncertainty, abrupt changes, and statistical patterns of passenger flow. However, existing scheduling approaches often suffer from inadequate modeling of passenger-flow disturbances, a trade-off between robustness and learning capability, and limited adaptability across multiple operating conditions—especially when confronted with semi-stationary or sudden passenger-flow disruptions, making it difficult to simultaneously guarantee stability, real-time responsiveness, and optimality of dispatch decisions.
+To address these challenges, this dissertation proposes a comprehensive real-time train rescheduling framework for intercity high-speed railways under uncertain and abrupt passenger-flow disturbances, grounded in advanced control theory. The framework integrates state-space modeling, robust model predictive control (RMPC), iterative learning control (ILC), and fuzzy logic methods to tackle the core problem of delay suppression and rapid recovery in dense traffic scenarios, thereby providing theoretical foundations and technical solutions for enhancing the autonomous regulation capability of intelligent rail transit systems. The main contributions and innovations are summarized as follows:
+
+1)State-space modeling for M>N operational scenarios: A discrete event-triggered state-space model incorporating passenger-flow disturbances is established for the first time, tailored to the unique “more trains than stations” (M>N) characteristic of intercity high-speed railways. By embedding passenger flow into dwell time dynamics and defining a state vector that captures multi-train coupling, the model precisely characterizes the evolution of departure deviations, offering a unified and scalable foundation for subsequent control strategies.
+
+2)Robust model predictive control (RMPC) under uncertain passenger flow: For scenarios where passenger-flow disturbances are bounded but unknown, an LMI-based RMPC controller is designed. By integrating H∞ performance and Lyapunov stability constraints, the controller guarantees system stability, safe headway compliance, and rapid delay convergence even under worst-case disturbances, significantly enhancing robustness against stochastic passenger-flow fluctuations.
+
+3)Iterative learning control (ILC) mechanism for abrupt passenger-flow changes: Targeting recurrent passenger-flow surges (e.g., morning/evening peaks) in cyclic operations, a batch-based ILC rescheduling framework is proposed. By updating control inputs after each operational cycle, the method progressively eliminates cumulative delays caused by structural passenger-flow biases, enabling continuous cross-cycle performance improvement and mitigating the conservatism of single-run robust control.
+
+4)Iterative learning fuzzy predictive control (IL-FPC) leveraging historical passenger-flow statistics: To further enhance performance, a hybrid architecture integrating Takagi–Sugeno (T-S) fuzzy models with ILC is developed. Historical passenger-flow statistics are used to define distinct operating regimes; fuzzy rules switch among local predictive models, while the ILC mechanism online refines control policies for each regime, achieving adaptive response and high-precision tracking under multimodal passenger-flow disturbances.
+
+This research establishes a complete technical chain spanning four levels—modeling, robustness, learning, and fusion—effectively resolving the co-optimization challenge of stability, real-time capability, and adaptability in train rescheduling under passenger-flow disturbances. Comprehensive simulations on the Beijing–Tianjin intercity railway, benchmarked against multiple baseline methods, validate the superior performance of the proposed approaches in terms of total delay reduction, recovery speed, computational efficiency, and multi-regime adaptability. The work provides a novel theoretical framework and practical pathway toward resilient and intelligent railway operation control.
+
+
+
+
+
+
+\englishkeywords{Intercity high-speed railway; Train rescheduling; Passenger-flow disturbance; Robust model predictive control; Iterative learning control; Fuzzy control}

@@ -1,12 +1,11 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String, DateTime
+from datetime import datetime
+from config.database import Base
 
-Base = declarative_base()
 
 class Station(Base):
     __tablename__ = "stations"
 
     station_id = Column(Integer, primary_key=True, autoincrement=True)
-    station_code = Column(String(10), unique=True, nullable=False)
-    station_name = Column(String(50), nullable=False)
-    station_type = Column(String(20))
+    station_name = Column(String(100), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)

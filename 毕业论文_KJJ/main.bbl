@@ -1,0 +1,641 @@
+\begin{thebibliography}{116}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\providecommand{\href}[2]{\url{#2}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+
+\bibitem[王荣笙(2021)]{wang2021}
+王荣笙.
+\newblock 大风临时限速下高速列车运行自动调整研究\allowbreak[D].
+\newblock 北京交通大学, 2021.
+
+\bibitem[Zhang\ et~al.(2021{\natexlab{a}})Zhang, Peng, Zhang, et~al.]{zhang2021train}
+ZHANG D, PENG Y, ZHANG Y, et~al.
+\newblock Train time delay prediction for high-speed train dispatching based on spatio-temporal graph convolutional network\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2021, 23\penalty0 (3): 2434-2444.
+
+\bibitem[Zhang\ et~al.(2023{\natexlab{a}})Zhang, Zhao, Qiao, et~al.]{zhang2023multistage}
+ZHANG P, ZHAO P, QIAO K, et~al.
+\newblock A multistage decision optimization approach for train timetable rescheduling under uncertain disruptions in a high-speed railway network\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (6): 6307-6321.
+
+\bibitem[Yu\ et~al.(2023)Yu, Huang, Wang, et~al.]{yu2023distributed}
+YU W, HUANG D, WANG Q, et~al.
+\newblock Distributed event-triggered iterative learning control for multiple high-speed trains with switching topologies: A data-driven approach\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (10): 10818-10829.
+
+\bibitem[Tiong\ et~al.(2023)Tiong, Ma, and Palmqvist]{tiong2023analyzing}
+TIONG K~Y, MA Z, PALMQVIST C~W.
+\newblock Analyzing factors contributing to real-time train arrival delays using seemingly unrelated regression models\allowbreak[J].
+\newblock Transportation Research Part A: Policy and Practice, 2023, 174: 103751.
+
+\bibitem[Yun-Li\ et~al.(2009)Yun-Li, Ying-Gui, and Ding-You]{yun2009decision}
+YUN-LI Z, YING-GUI Z, DING-YOU L.
+\newblock Decision support system of track application in railway passenger station under condition of ctc\allowbreak[C]//\allowbreak{}2009 Second International Conference on Intelligent Computation Technology and Automation: volume~3.
+\newblock IEEE, 2009: 542-545.
+
+\bibitem[Dias\ et~al.(2016)Dias and Ierapetritou]{DIAS201698}
+DIAS L~S, IERAPETRITOU M~G.
+\newblock Integration of scheduling and control under uncertainties: Review and challenges\allowbreak[J/OL].
+\newblock Chemical Engineering Research and Design, 2016, 116: 98-113.
+\newblock \url{https://www.sciencedirect.com/science/article/pii/S0263876216304130}.
+\newblock DOI: \doi{https://doi.org/10.1016/j.cherd.2016.10.047}.
+
+\bibitem[Stankovic\ et~al.(2001)Stankovic, He, Abdelzaher, Marley, Tao, Son, and Lu]{Stankovic2001}
+STANKOVIC J, HE T, ABDELZAHER T, et~al.
+\newblock Feedback control scheduling in distributed real-time systems\allowbreak[C]//\allowbreak{}Proceedings 22nd IEEE Real-Time Systems Symposium (RTSS 2001) (Cat. No.01PR1420).
+\newblock 2001: 59-70.
+\newblock DOI: \doi{10.1109/REAL.2001.990596}.
+
+\bibitem[Walsh\ et~al.(2001)Walsh and Ye]{Walsh2001}
+WALSH G, YE H.
+\newblock Scheduling of networked control systems\allowbreak[J].
+\newblock IEEE Control Systems Magazine, 2001, 21\penalty0 (1): 57-65.
+\newblock DOI: \doi{10.1109/37.898792}.
+
+\bibitem[Stankovic\ et~al.(1999)Stankovic, Lu, Son, and Tao]{Stankovic1999}
+STANKOVIC J, LU C, SON S, et~al.
+\newblock The case for feedback control real-time scheduling\allowbreak[C]//\allowbreak{}Proceedings of 11th Euromicro Conference on Real-Time Systems. Euromicro RTS'99.
+\newblock 1999: 11-20.
+\newblock DOI: \doi{10.1109/EMRTS.1999.777445}.
+
+\bibitem[Shobrys\ et~al.(2002)Shobrys and White]{SHOBRYS2002149}
+SHOBRYS D~E, WHITE D~C.
+\newblock Planning, scheduling and control systems: why cannot they work together\allowbreak[J/OL].
+\newblock Computers and Chemical Engineering, 2002, 26\penalty0 (2): 149-160.
+\newblock \url{https://www.sciencedirect.com/science/article/pii/S0098135401007372}.
+\newblock DOI: \doi{https://doi.org/10.1016/S0098-1354(01)00737-2}.
+
+\bibitem[Hansen\ et~al.(2001)Hansen and Sargent]{hansen2001robust}
+HANSEN L~P, SARGENT T~J.
+\newblock Robust control and model uncertainty\allowbreak[J].
+\newblock American Economic Review, 2001, 91\penalty0 (2): 60-66.
+
+\bibitem[Calafiore\ et~al.(2012)Calafiore and Fagiano]{calafiore2012robust}
+CALAFIORE G~C, FAGIANO L.
+\newblock Robust model predictive control via scenario optimization\allowbreak[J].
+\newblock IEEE Transactions on Automatic Control, 2012, 58\penalty0 (1): 219-224.
+
+\bibitem[Weinmann(2012)]{weinmann2012uncertain}
+WEINMANN A.
+\newblock Uncertain models and robust control\allowbreak[M].
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem[Mhaskar(2006)]{mhaskar2006robust}
+MHASKAR P.
+\newblock Robust model predictive control design for fault-tolerant control of process systems\allowbreak[J].
+\newblock Industrial \& engineering chemistry research, 2006, 45\penalty0 (25): 8565-8574.
+
+\bibitem[Mayne\ et~al.(2005)Mayne, Seron, and Rakovi{\'c}]{mayne2005robust}
+MAYNE D~Q, SERON M~M, RAKOVI{\'C} S~V.
+\newblock Robust model predictive control of constrained linear systems with bounded disturbances\allowbreak[J].
+\newblock Automatica, 2005, 41\penalty0 (2): 219-224.
+
+\bibitem[Grimm\ et~al.(2007)Grimm, Messina, Tuna, and Teel]{grimm2007nominally}
+GRIMM G, MESSINA M~J, TUNA S~E, et~al.
+\newblock Nominally robust model predictive control with state constraints\allowbreak[J].
+\newblock IEEE Transactions on Automatic Control, 2007, 52\penalty0 (10): 1856-1870.
+
+\bibitem[Dorato(2003)]{dorato2003historical}
+DORATO P.
+\newblock A historical review of robust control\allowbreak[J].
+\newblock IEEE Control Systems Magazine, 2003, 7\penalty0 (2): 44-47.
+
+\bibitem[Li\ et~al.(2019)Li, Wang, Xu, Qin, and Zhang]{li2019short}
+LI H, WANG Y, XU X, et~al.
+\newblock Short-term passenger flow prediction under passenger flow control using a dynamic radial basis function network\allowbreak[J].
+\newblock Applied Soft Computing, 2019, 83: 105620.
+
+\bibitem[Daamen(2004)]{daamen2004modelling}
+DAAMEN W.
+\newblock Modelling passenger flows in public transport facilities\allowbreak[Z].
+\newblock 2004.
+
+\bibitem[Sun\ et~al.(2015)Sun, Lu, Jin, Lee, and Axhausen]{sun2015integrated}
+SUN L, LU Y, JIN J~G, et~al.
+\newblock An integrated bayesian approach for passenger flow assignment in metro networks\allowbreak[J].
+\newblock Transportation Research Part C: Emerging Technologies, 2015, 52: 116-131.
+
+\bibitem[Zhang\ et~al.(2017)Zhang, Shen, Tu, Zhang, Xu, Wang, Tian, Li, Huang, and Li]{zhang2017real}
+ZHANG J, SHEN D, TU L, et~al.
+\newblock A real-time passenger flow estimation and prediction method for urban bus transit systems\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2017, 18\penalty0 (11): 3168-3178.
+
+\bibitem[Szpigel(1973)]{Szpigel1973}
+SZPIGEL B.
+\newblock Optimal train scheduling on a single track railway\allowbreak[J].
+\newblock Operational Research, 1973, 72: 343-351.
+
+\bibitem[Earl\ et~al.(2005)Earl and D'andrea]{earl2005iterative}
+EARL M~G, D'ANDREA R.
+\newblock Iterative milp methods for vehicle-control problems\allowbreak[J].
+\newblock IEEE Transactions on Robotics, 2005, 21\penalty0 (6): 1158-1167.
+
+\bibitem[Birgin\ et~al.(2014)Birgin, Feofiloff, Fernandes, De~Melo, Oshiro, and Ronconi]{birgin2014milp}
+BIRGIN E~G, FEOFILOFF P, FERNANDES C~G, et~al.
+\newblock A milp model for an extended version of the flexible job shop problem\allowbreak[J].
+\newblock Optimization Letters, 2014, 8\penalty0 (4): 1417-1431.
+
+\bibitem[Yao\ et~al.(2023)Yao, Liu, Li, and Gao]{yao2023novel}
+YAO Y~J, LIU Q~H, LI X~Y, et~al.
+\newblock A novel milp model for job shop scheduling problem with mobile robots\allowbreak[J].
+\newblock Robotics and Computer-Integrated Manufacturing, 2023, 81: 102506.
+
+\bibitem[Meng\ et~al.(2023)Meng, Zhang, Zhang, Gao, Ren, and Sang]{meng2023milp}
+MENG L, ZHANG C, ZHANG B, et~al.
+\newblock Milp modeling and optimization of multi-objective flexible job shop scheduling problem with controllable processing times\allowbreak[J].
+\newblock Swarm and Evolutionary Computation, 2023, 82: 101374.
+
+\bibitem[Chen\ et~al.(2024)Chen, Kuhn, and Wiesemann]{chen2024data}
+CHEN Z, KUHN D, WIESEMANN W.
+\newblock Data-driven chance constrained programs over wasserstein balls\allowbreak[J].
+\newblock Operations Research, 2024, 72\penalty0 (1): 410-424.
+
+\bibitem[Wang\ et~al.(2022{\natexlab{a}})Wang, Sun, and Ding]{wang2022adaptive}
+WANG X, SUN Y, DING D.
+\newblock Adaptive dynamic programming for networked control systems under communication constraints: A survey of trends and techniques\allowbreak[J].
+\newblock International Journal of Network Dynamics and Intelligence, 2022, 1\penalty0 (1): 85-98.
+
+\bibitem[Rossi\ et~al.(2008)Rossi, Van~Beek, and Walsh]{rossi2008constraint}
+ROSSI F, VAN~BEEK P, WALSH T.
+\newblock Constraint programming\allowbreak[J].
+\newblock Foundations of Artificial Intelligence, 2008, 3: 181-211.
+
+\bibitem[Li\ et~al.(2008)Li, Arellano-Garcia, and Wozny]{li2008chance}
+LI P, ARELLANO-GARCIA H, WOZNY G.
+\newblock Chance constrained programming approach to process optimization under uncertainty\allowbreak[J].
+\newblock Computers and chemical engineering, 2008, 32\penalty0 (1-2): 25-45.
+
+\bibitem[Ruiz~Estrada(2017)]{ruiz2017alternative}
+RUIZ~ESTRADA M~A.
+\newblock An alternative graphical modeling for economics: Econographicology\allowbreak[J].
+\newblock Quality \& Quantity, 2017, 51\penalty0 (5): 2115-2139.
+
+\bibitem[Zhang\ et~al.(2022)Zhang, Guo, Tu, and Zhang]{zhang2022graph}
+ZHANG B, GUO X, TU Z, et~al.
+\newblock Graph alternate learning for robust graph neural networks in node classification\allowbreak[J].
+\newblock Neural Computing and Applications, 2022, 34\penalty0 (11): 8723-8735.
+
+\bibitem[Robins\ et~al.(2010)Robins and Richardson]{robins2010alternative}
+ROBINS J~M, RICHARDSON T~S.
+\newblock Alternative graphical causal models and the identification of direct effects\allowbreak[J].
+\newblock Causality and psychopathology: Finding the determinants of disorders and their cures, 2010, 84: 103-158.
+
+\bibitem[D'Ariano\ et~al.(2007)D'Ariano, Pacciarelli, and Pranzo]{DAriano2007}
+D'ARIANO A, PACCIARELLI D, PRANZO M.
+\newblock A branch and bound algorithm for scheduling trains in a railway network\allowbreak[J].
+\newblock European Journal of Operational Research, 2007, 183\penalty0 (2): 643-657.
+
+\bibitem[Zhao\ et~al.(2020)Zhao, Dai, Zhang, and Ding]{Zhao2020}
+ZHAO H, DAI X, ZHANG Q, et~al.
+\newblock Robust event-triggered model predictive control for multiple high-speed trains with switching topologies\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2020, PP\penalty0 (99): 1-1.
+
+\bibitem[Zhang\ et~al.(2023{\natexlab{b}})Zhang, Zhao, Qiao, Wen, and Li]{Zhang2023}
+ZHANG P, ZHAO P, QIAO K, et~al.
+\newblock A multistage decision optimization approach for train timetable rescheduling under uncertain disruptions in a high-speed railway network\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (6): 6307-6321.
+\newblock DOI: \doi{10.1109/tits.2023.3253928}.
+
+\bibitem[Ghasempour\ et~al.(2020)Ghasempour, Nicholson, Kirkwood, Fujiyama, and Heydecker]{Ghasempour2020}
+GHASEMPOUR T, NICHOLSON G~L, KIRKWOOD D, et~al.
+\newblock Distributed approximate dynamic control for traffic management of busy railway networks\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2020, 21\penalty0 (9): 3788-3798.
+\newblock DOI: \doi{10.1109/tits.2019.2934083}.
+
+\bibitem[Liu\ et~al.(2024)Liu, Cui, Dai, Yue, and Yuan]{Liu2024}
+LIU R, CUI D, DAI X, et~al.
+\newblock A data-driven surrogate modeling for train rescheduling in high-speed railway networks under wind-caused speed restrictions\allowbreak[J].
+\newblock IEEE Transactions on Automation Science and Engineering, 2024, 21\penalty0 (2): 1107-1121.
+\newblock DOI: \doi{10.1109/TASE.2023.3338695}.
+
+\bibitem[Yin\ et~al.(2023)Yin, Ren, Su, Yan, and Tao]{Yin2023}
+YIN J, REN X, SU S, et~al.
+\newblock Resilience-oriented train rescheduling optimization in railway networks: A mixed integer programming approach\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (5): 4948-4961.
+\newblock DOI: \doi{10.1109/tits.2023.3236004}.
+
+\bibitem[Huang\ et~al.(2021)Huang, Chen, Meng, and Sun]{Huang2021}
+HUANG D, CHEN Y, MENG D, et~al.
+\newblock Adaptive iterative learning control for high-speed train: A multi-agent approach\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2021, 51\penalty0 (7): 4067-4077.
+\newblock DOI: \doi{10.1109/TSMC.2019.2931289}.
+
+\bibitem[Liu\ et~al.(2019)Liu, Zhou, Guo, Zhang, Ning, and Tang]{Liu2019}
+LIU H, ZHOU M, GUO X, et~al.
+\newblock Timetable optimization for regenerative energy utilization in subway systems\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2019, 20\penalty0 (9): 3247-3257.
+\newblock DOI: \doi{10.1109/tits.2018.2873145}.
+
+\bibitem[Pellegrini\ et~al.(2014)Pellegrini, Marli{\`e}re, and Rodriguez]{Pellegrini2014}
+PELLEGRINI P, MARLI{\`E}RE G, RODRIGUEZ J.
+\newblock Optimal train routing and scheduling for managing traffic perturbations in complex junctions\allowbreak[J].
+\newblock Transportation Research Part B: Methodological, 2014, 59: 58-80.
+
+\bibitem[Lamorgese\ et~al.(2015)Lamorgese and Mannino]{Lamorgese2015}
+LAMORGESE L, MANNINO C.
+\newblock An exact decomposition approach for the real-time train dispatching problem\allowbreak[J].
+\newblock Operations Research, 2015, 63\penalty0 (1): 48-64.
+
+\bibitem[Leutwiler\ et~al.(2023)Leutwiler, Filella, and Corman]{Leutwiler2023}
+LEUTWILER F, FILELLA G~B, CORMAN F.
+\newblock Accelerating logic-based benders decomposition for railway rescheduling by exploiting similarities in delays\allowbreak[J].
+\newblock Computers \& Operations Research, 2023, 150: 106075.
+
+\bibitem[Shakibayifar\ et~al.(2017)Shakibayifar, Sheikholeslami, and Corman]{Shakibayifar2017}
+SHAKIBAYIFAR M, SHEIKHOLESLAMI A, CORMAN F.
+\newblock A simulation-based optimization approach to reschedule train traffic in uncertain conditions during disruptions\allowbreak[J].
+\newblock E-Ilmiah Penerbit Persatuan (E-scholarly Publishers Association), 2017\penalty0 (2).
+
+\bibitem[Zhou\ et~al.(2021)Zhou, Chen, Dai, Li, and Chai]{Zhou2021}
+ZHOU P, CHEN L, DAI X, et~al.
+\newblock Intelligent prediction of train delay changes and propagation using rvflns with improved transfer learning and ensemble learning\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2021, 22\penalty0 (12): 7432-7444.
+\newblock DOI: \doi{10.1109/tits.2020.3002785}.
+
+\bibitem[Petersen\ et~al.(2010)Petersen, Taylor, and Martland]{Petersen2010}
+PETERSEN E~R, TAYLOR A~J, MARTLAND C~D.
+\newblock An introduction to computer‐assisted train dispatch\allowbreak[J].
+\newblock Journal of Advanced Transportation, 2010, 20\penalty0 (1): 63-72.
+
+\bibitem[Hou\ et~al.(2019)Hou, Dong, Gao, Nicholson, Chen, and Roberts]{Hou2019}
+HOU Z, DONG H, GAO S, et~al.
+\newblock Energy-saving metro train timetable rescheduling model considering ato profiles and dynamic passenger flow\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2019, 20\penalty0 (7): 2774-2785.
+\newblock DOI: \doi{10.1109/tits.2019.2906483}.
+
+\bibitem[Hassannayebi\ et~al.(2021)Hassannayebi, Sajedinejad, Kardannia, Shakibayifar, Jafari, and Mansouri]{hassannayebi2021simulation}
+HASSANNAYEBI E, SAJEDINEJAD A, KARDANNIA A, et~al.
+\newblock Simulation-optimization framework for train rescheduling in rapid rail transit\allowbreak[J].
+\newblock Transportmetrica B: Transport Dynamics, 2021, 9\penalty0 (1): 343-375.
+
+\bibitem[Luethi\ et~al.(2009)Luethi, Medeossi, and Nash]{luethi2009structure}
+LUETHI M, MEDEOSSI G, NASH A.
+\newblock Structure and simulation evaluation of an integrated real-time rescheduling system for railway networks\allowbreak[J].
+\newblock Networks and Spatial Economics, 2009, 9\penalty0 (1): 103-121.
+
+\bibitem[Altazin\ et~al.(2020)Altazin, Dauz{\`e}re-P{\'e}r{\`e}s, Ramond, and Tr{\'e}fond]{altazin2020multi}
+ALTAZIN E, DAUZ{\`E}RE-P{\'E}R{\`E}S S, RAMOND F, et~al.
+\newblock A multi-objective optimization-simulation approach for real time rescheduling in dense railway systems\allowbreak[J].
+\newblock European Journal of Operational Research, 2020, 286\penalty0 (2): 662-672.
+
+\bibitem[Tamannaei\ et~al.(2016)Tamannaei, Saffarzadeh, Jamili, and Seyedabrishami]{tamannaei2016novel}
+TAMANNAEI M, SAFFARZADEH M, JAMILI A, et~al.
+\newblock A novel train rescheduling approach in double-track railways: optimization model and solution method based on simulated annealing algorithm\allowbreak[J].
+\newblock International Journal of Civil Engineering, 2016, 14\penalty0 (3): 139-150.
+
+\bibitem[Eaton\ et~al.(2017)Eaton, Yang, and Gongora]{eaton2017ant}
+EATON J, YANG S, GONGORA M.
+\newblock Ant colony optimization for simulated dynamic multi-objective railway junction rescheduling\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2017, 18\penalty0 (11): 2980-2992.
+
+\bibitem[Cheng(1998)]{cheng1998hybrid}
+CHENG Y.
+\newblock Hybrid simulation for resolving resource conflicts in train traffic rescheduling\allowbreak[J].
+\newblock Computers in Industry, 1998, 35\penalty0 (3): 233-246.
+
+\bibitem[Cuevas\ et~al.(2023)Cuevas, Zald{\'i}var, and P{\'e}rez-Cisneros]{Cuevas2023}
+CUEVAS E, ZALD{\'I}VAR D, P{\'E}REZ-CISNEROS M.
+\newblock Introduction to metaheuristic schemes: Characteristics, properties, and importance in solving optimization problems\allowbreak[M].
+\newblock Cham: Springer Nature Switzerland, 2023: 1-9.
+
+\bibitem[Corman\ et~al.(2010)Corman, D'Ariano, Pacciarelli, et~al.]{Corman2010}
+CORMAN F, D'ARIANO A, PACCIARELLI D, et~al.
+\newblock A tabu search algorithm for rerouting trains during rail operations\allowbreak[J].
+\newblock Transportation Research Part B: Methodological, 2010, 44\penalty0 (1): 175-192.
+
+\bibitem[Wang\ et~al.(2023)Wang, Zhang, Dai, et~al.]{WangR2023}
+WANG R, ZHANG Q, DAI X, et~al.
+\newblock An efficient evolutionary algorithm for high-speed train rescheduling under a partial station blockage\allowbreak[J].
+\newblock Applied Soft Computing, 2023, 145: 110590.
+
+\bibitem[Hassannayebi\ et~al.(2018)Hassannayebi, Zegordi, Amin-Naseri, et~al.]{Hassannayebi2018}
+HASSANNAYEBI E, ZEGORDI S~H, AMIN-NASERI M~R, et~al.
+\newblock Optimizing headways for urban rail transit services using adaptive particle swarm algorithms\allowbreak[J].
+\newblock Public Transport, 2018, 10: 23-62.
+
+\bibitem[Zhou(2018)]{ZhouXZ2018}
+ZHOU X.
+\newblock Research on intelligent adjustment strategies and methods for train operations in complex high-speed railway networks\allowbreak[D].
+\newblock China Academy of Railway Sciences, 2018.
+
+\bibitem[Behiri\ et~al.(2023)Behiri, Belmokhtar-Berraf, and Chu]{Behiri2023}
+BEHIRI W, BELMOKHTAR-BERRAF S, CHU C.
+\newblock A robust ant colony metaheuristic for urban freight transport scheduling using passenger rail network\allowbreak[J].
+\newblock Expert Systems with Applications, 2023, 213: 118906.
+
+\bibitem[Wang\ et~al.(2019)Wang, Wang, Xu, et~al.]{WangM2019}
+WANG M, WANG L, XU X, et~al.
+\newblock Genetic algorithm-based particle swarm optimization approach to reschedule high-speed railway timetables: A case study in china\allowbreak[J].
+\newblock Journal of Advanced Transportation, 2019, 2019\penalty0 (1): 6090742.
+
+\bibitem[Schachtebeck\ et~al.(2008)Schachtebeck and Sch{\"o}bel]{Schachtebeck2008}
+SCHACHTEBECK M, SCH{\"O}BEL A.
+\newblock Ip-based techniques for delay management with priority decisions\allowbreak[C]//\allowbreak{}8th Workshop on Algorithmic Approaches for Transportation Modeling, Optimization, and Systems (ATMOS'08).
+\newblock 2008: 1-16.
+
+\bibitem[Norio\ et~al.(2005)Norio, Yoshiaki, Noriyuki, et~al.]{Norio2005}
+NORIO T, YOSHIAKI T, NORIYUKI T, et~al.
+\newblock Train rescheduling algorithm which minimizes passengers' dissatisfaction\allowbreak[C]//\allowbreak{}Innovations in Applied Artificial Intelligence: 18th International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems, IEA/AIE 2005.
+\newblock 2005: 829-838.
+
+\bibitem[Krasemann(2012)]{Krasemann2012}
+KRASEMANN J~T.
+\newblock Design of an effective algorithm for fast response to the rescheduling of railway traffic during disturbances\allowbreak[J].
+\newblock Transportation Research Part C: Emerging Technologies, 2012, 20\penalty0 (1): 62-78.
+
+\bibitem[Wenliang\ et~al.(2015)Wenliang, Junli, Jin, Lianbo, and Tangjian]{Wenliang2015}
+WENLIANG Z, JUNLI T, JIN Q, et~al.
+\newblock Optimization of multiperiod mixed train schedule on high-speed railway\allowbreak[J].
+\newblock Discrete Dynamics in Nature and Society, 2015, 2015: 1-14.
+
+\bibitem[Khadilkar(2019)]{Khadilkar2019}
+KHADILKAR H.
+\newblock A scalable reinforcement learning algorithm for scheduling railway lines\allowbreak[J].
+\newblock Nature reviews neuroscience, 2019\penalty0 (2).
+
+\bibitem[Li\ et~al.(2014)Li, Shou, and Ralescu]{Li2014}
+LI X, SHOU B, RALESCU D.
+\newblock Train rescheduling with stochastic recovery time: A new track-backup approach\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2014, 44\penalty0 (9): 1216-1233.
+\newblock DOI: \doi{10.1109/TSMC.2014.2301140}.
+
+\bibitem[Isaai\ et~al.(2000)Isaai and Singh]{Isaai2000}
+ISAAI M, SINGH M.
+\newblock An object-oriented, constraint-based heuristic for a class of passenger-train scheduling problems\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews), 2000, 30\penalty0 (1): 12-21.
+\newblock DOI: \doi{10.1109/5326.827450}.
+
+\bibitem[Oneto\ et~al.(2017)Oneto, Fumeo, Clerico, Canepa, Papa, Dambra, Mazzino, and Anguita]{Oneto2017}
+ONETO L, FUMEO E, CLERICO G, et~al.
+\newblock Dynamic delay predictions for large-scale railway networks: Deep and shallow extreme learning machines tuned via thresholdout\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2017, 47\penalty0 (10): 2754-2767.
+\newblock DOI: \doi{10.1109/TSMC.2017.2693209}.
+
+\bibitem[Haydari\ et~al.(2020)Haydari and Y{\i}lmaz]{Haydari2020}
+HAYDARI A, Y{I}LMAZ Y.
+\newblock Deep reinforcement learning for intelligent transportation systems: A survey\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2020, 23\penalty0 (1): 11-32.
+
+\bibitem[Wang\ et~al.(2021)Wang and Tang]{WangQ2021}
+WANG Q, TANG C.
+\newblock Deep reinforcement learning for transportation network combinatorial optimization: A survey\allowbreak[J].
+\newblock Knowledge-Based Systems, 2021, 233: 107526.
+
+\bibitem[Cao\ et~al.(2020)Cao, Guo, Song, et~al.]{Cao2020}
+CAO Z, GUO H, SONG W, et~al.
+\newblock Using reinforcement learning to minimize the probability of delay occurrence in transportation\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2020, 69\penalty0 (3): 2424-2436.
+
+\bibitem[Qu\ et~al.(2022)Qu, Li, Zhou, et~al.]{Qu2022}
+QU Q, LI X, ZHOU Y, et~al.
+\newblock An improved reinforcement learning algorithm for learning to branch\allowbreak[J].
+\newblock arXiv preprint arXiv:2201.06213, 2022.
+
+\bibitem[Tang\ et~al.(2020)Tang, Agrawal, and Faenza]{Tang2020}
+TANG Y, AGRAWAL S, FAENZA Y.
+\newblock Reinforcement learning for integer programming: Learning to cut\allowbreak[C]//\allowbreak{}International Conference on Machine Learning (ICML).
+\newblock PMLR, 2020: 9367-9376.
+
+\bibitem[{\v{S}}emrov\ et~al.(2016){\v{S}}emrov, Marseti{\v{c}}, {\v{Z}}ura, et~al.]{semrov2016reinforcement}
+{\v{S}}EMROV D, MARSETI{\v{C}} R, {\v{Z}}URA M, et~al.
+\newblock Reinforcement learning approach for train rescheduling on a single-track railway\allowbreak[J].
+\newblock Transportation Research Part B: Methodological, 2016, 86: 250-267.
+
+\bibitem[Yue\ et~al.(2023)Yue, Jin, Dai, Feng, and Cui]{Yue2023}
+YUE P, JIN Y, DAI X, et~al.
+\newblock Reinforcement learning for online dispatching policy in real-time train timetable rescheduling\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023: 1-13.
+\newblock DOI: \doi{10.1109/tits.2023.3305074}.
+
+\bibitem[Ning\ et~al.(2019)Ning, Li, Zhou, Song, and Dong]{Ning2019}
+NING L, LI Y, ZHOU M, et~al.
+\newblock A deep reinforcement learning approach to high-speed train timetable rescheduling under disturbances\allowbreak[C]//\allowbreak{}2019 IEEE Intelligent Transportation Systems Conference (ITSC).
+\newblock IEEE, 2019.
+\newblock DOI: \doi{10.1109/itsc.2019.8917180}.
+
+\bibitem[Dong\ et~al.(2025)Dong, Ning, Zhou, Song, and Bai]{Dong2025}
+DONG H, NING L, ZHOU M, et~al.
+\newblock Deep reinforcement learning for integration of train trajectory optimization and timetable rescheduling under disturbances\allowbreak[J].
+\newblock IEEE Transactions on Neural Networks and Learning Systems, 2025, 36\penalty0 (8): 14009-14021.
+\newblock DOI: \doi{10.1109/TNNLS.2024.3357494}.
+
+\bibitem[Xu\ et~al.(2023)Xu, Zhao, Cheng, Wang, Tang, Zhang, Yuan, Lv, and Wang]{Xu2023}
+XU W, ZHAO C, CHENG J, et~al.
+\newblock Transformer-based macroscopic regulation for high-speed railway timetable rescheduling\allowbreak[J].
+\newblock IEEE/CAA Journal of Automatica Sinica, 2023, 10\penalty0 (9): 1822-1833.
+\newblock DOI: \doi{10.1109/jas.2023.123501}.
+
+\bibitem[Liao\ et~al.(2021)Liao, Yang, Zhang, et~al.]{Liao2021}
+LIAO J, YANG G, ZHANG S, et~al.
+\newblock A deep reinforcement learning approach for the energy-aimed train timetable rescheduling problem under disturbances\allowbreak[J].
+\newblock IEEE Transactions on Transportation Electrification, 2021, 7\penalty0 (4): 3096-3109.
+
+\bibitem[Sartor\ et~al.(2023)Sartor, Mannino, Nygreen, Bach, and Lev]{Sartor2023}
+SARTOR G, MANNINO C, NYGREEN T, et~al.
+\newblock A milp model for quasi-periodic strategic train timetabling\allowbreak[J].
+\newblock Omega: The international journal of management science, 2023.
+
+\bibitem[Cacchiani\ et~al.(2012)Cacchiani and Toth]{Cacchiani2012}
+CACCHIANI V, TOTH P.
+\newblock Nominal and robust train timetabling problems\allowbreak[J].
+\newblock European Journal of Operational Research, 2012, 219\penalty0 (3): 727-737.
+\newblock DOI: \doi{10.1016/j.ejor.2011.11.003}.
+
+\bibitem[Zimmermann\ et~al.(2003)Zimmermann and Lindner]{Zimmermann2003}
+ZIMMERMANN U~T, LINDNER T.
+\newblock Train schedule optimization in public rail transport\allowbreak[M/OL].
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg, 2003: 703-716.
+\newblock \url{https://doi.org/10.1007/978-3-642-55753-8_53}.
+
+\bibitem[Caimi\ et~al.(2011)Caimi, Fuchsberger, Laumanns, and Schüpbach]{Caimi2011}
+CAIMI G, FUCHSBERGER M, LAUMANNS M, et~al.
+\newblock Periodic railway timetabling with event flexibility\allowbreak[J/OL].
+\newblock Networks, 2011, 57\penalty0 (1): 3-18.
+\newblock \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20379}.
+\newblock DOI: \doi{https://doi.org/10.1002/net.20379}.
+
+\bibitem[Gromann\ et~al.(2012)Gromann, Hlldobler, Manthey, Nachtigall, and Steinke]{Gromann2012}
+GROMANN P, HLLDOBLER S, MANTHEY N, et~al.
+\newblock Solving periodic event scheduling problems with sat\allowbreak[J].
+\newblock Springer, Berlin, Heidelberg, 2012.
+
+\bibitem[Ai\ et~al.(2022)Ai, Zuo, Chen, and Wu]{Ai2022}
+AI G, ZUO X, CHEN G, et~al.
+\newblock Deep reinforcement learning based dynamic optimization of bus timetable\allowbreak[J].
+\newblock Applied Soft Computing, 2022.
+
+\bibitem[Besinovic\ et~al.(2022)Besinovic, Wang, Zhu, Quaglietta, Tang, and Goverde]{Besinovic2022}
+BESINOVIC N, WANG Y, ZHU S, et~al.
+\newblock A matheuristic for the integrated disruption management of traffic, passengers and stations in urban railway lines\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2022, 23\penalty0 (8): 10380-10394.
+\newblock DOI: \doi{10.1109/tits.2021.3093570}.
+
+\bibitem[Niu\ et~al.(2015)Niu, Zhou, and Gao]{Niu2015}
+NIU H, ZHOU X, GAO R.
+\newblock Train scheduling for minimizing passenger waiting time with time-dependent demand and skip-stop patterns: Nonlinear integer programming models with linear constraints\allowbreak[J].
+\newblock Transportation Research Part B: Methodological, 2015, 76: 117-135.
+\newblock DOI: \doi{10.1016/j.trb.2015.03.004}.
+
+\bibitem[Hu\ et~al.(2023)Hu, Li, Wang, Zhang, Wei, and Yang]{Hu2023}
+HU Y, LI S, WANG Y, et~al.
+\newblock Robust metro train scheduling integrated with skip-stop pattern and passenger flow control strategy under uncertain passenger demands\allowbreak[J].
+\newblock Computers and Operations Research, 2023, 151: 106116.
+\newblock DOI: \doi{10.1016/j.cor.2022.106116}.
+
+\bibitem[Shao\ et~al.(2022)Shao, Xu, Sun, Kong, and Lu]{Shao2022}
+SHAO J, XU Y, SUN L, et~al.
+\newblock Equity-oriented integrated optimization of train timetable and stop plans for suburban railways system\allowbreak[J].
+\newblock Computers and Industrial Engineering, 2022, 173: 108721.
+\newblock DOI: \doi{10.1016/j.cie.2022.108721}.
+
+\bibitem[Van~Breusegem\ et~al.(1991)Van~Breusegem, Campion, and Bastin]{VanBreusegem1991}
+VAN~BREUSEGEM V, CAMPION G, BASTIN G.
+\newblock Traffic modeling and state feedback control for metro lines\allowbreak[J].
+\newblock IEEE Transactions on Automatic Control, 1991, 36\penalty0 (7): 770-784.
+\newblock DOI: \doi{10.1109/9.85057}.
+
+\bibitem[Wang\ et~al.(2022{\natexlab{b}})Wang, Zhu, Li, Yang, and De~Schutter]{Wang2022}
+WANG Y, ZHU S, LI S, et~al.
+\newblock Hierarchical model predictive control for on-line high-speed railway delay management and train control in a dynamic operations environment\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2022, 30\penalty0 (6): 2344-2359.
+\newblock DOI: \doi{10.1109/tcst.2022.3140805}.
+
+\bibitem[Yang\ et~al.(2016{\natexlab{a}})Yang, Zhang, and Liu]{Yang2016a}
+YANG H, ZHANG K~P, LIU H~E.
+\newblock Online regulation of high speed train trajectory control based on t-s fuzzy bilinear model\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2016, 17\penalty0 (6): 1496-1508.
+\newblock DOI: \doi{10.1109/tits.2015.2497320}.
+
+\bibitem[Li\ et~al.(2013)Li, Dong, Ji, Zhang, and Tong]{Li2013}
+LI L, DONG W, JI Y, et~al.
+\newblock Minimal-energy driving strategy for high-speed electric train with hybrid system model\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2013, 14\penalty0 (4): 1642-1653.
+\newblock DOI: \doi{10.1109/tits.2013.2265395}.
+
+\bibitem[Yang\ et~al.(2016{\natexlab{b}})Yang, Chen, Ning, and Tang]{Yang2016}
+YANG X, CHEN A, NING B, et~al.
+\newblock A stochastic model for the integrated optimization on metro timetable and speed profile with uncertain train mass\allowbreak[J].
+\newblock Transportation Research Part B: Methodological, 2016, 91: 424-445.
+\newblock DOI: \doi{10.1016/j.trb.2016.06.006}.
+
+\bibitem[García\ et~al.(1989)García, Prett, and Morari]{Garcia1989}
+GARCíA C~E, PRETT D~M, MORARI M.
+\newblock Model predictive control: Theory and practice—a survey\allowbreak[J].
+\newblock Automatica, 1989, 25\penalty0 (3): 335-348.
+\newblock DOI: \doi{10.1016/0005-1098(89)90002-2}.
+
+\bibitem[Maciejonski(1999)]{Maciejonski1999}
+MACIEJONSKI J.
+\newblock Predictive control with constraints\allowbreak[J].
+\newblock Prentice-Hall, 1999.
+
+\bibitem[Rosolia\ et~al.(2022)Rosolia, Zhang, and Borrelli]{Rosolia2022a}
+ROSOLIA U, ZHANG X, BORRELLI F.
+\newblock Robust learning model-predictive control for linear systems performing iterative tasks\allowbreak[J].
+\newblock IEEE Transactions on Automatic Control, 2022, 67\penalty0 (2): 856-869.
+\newblock DOI: \doi{10.1109/tac.2021.3083559}.
+
+\bibitem[Kothare\ et~al.(1996)Kothare, Balakrishnan, and Morari]{Kothare1996}
+KOTHARE M~V, BALAKRISHNAN V, MORARI M.
+\newblock Robust constrained model predictive control using linear matrix inequalities\allowbreak[J].
+\newblock Automatica, 1996, 32\penalty0 (10): 1361-1379.
+\newblock DOI: \doi{10.1016/0005-1098(96)00063-5}.
+
+\bibitem[Liu\ et~al.(2023)Liu, Dabiri, Wang, and De~Schutter]{Liu2023}
+LIU X, DABIRI A, WANG Y, et~al.
+\newblock Modeling and efficient passenger-oriented control for urban rail transit networks\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (3): 3325-3338.
+\newblock DOI: \doi{10.1109/tits.2022.3228340}.
+
+\bibitem[Li\ et~al.(2016{\natexlab{a}})Li, Schutter, Yang, and Gao]{Li2016}
+LI S, SCHUTTER B~D, YANG L, et~al.
+\newblock Robust model predictive control for train regulation in underground railway transportation\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2016, 24\penalty0 (3): 1075-1083.
+
+\bibitem[Zheng\ et~al.(2023)Zheng and Hou]{Zheng2023}
+ZHENG J, HOU Z.
+\newblock Data-driven spatial adaptive terminal iterative learning predictive control for automatic stop control of subway train with actuator saturation\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2023, 24\penalty0 (10): 11453-11465.
+\newblock DOI: \doi{10.1109/TITS.2023.3275205}.
+
+\bibitem[Zhang\ et~al.(2021{\natexlab{b}})Zhang and Gao]{Zhang2021}
+ZHANG R, GAO F.
+\newblock Two-dimensional iterative learning model predictive control for batch processes: A new state space model compensation approach\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2021, 51\penalty0 (2): 833-841.
+\newblock DOI: \doi{10.1109/TSMC.2018.2883754}.
+
+\bibitem[Wu\ et~al.(2022)Wu, Qiu, Liu, Guo, Rodriguez, Ma, and Fang]{Wu2022}
+WU W, QIU L, LIU X, et~al.
+\newblock Data-driven iterative learning predictive control for power converters\allowbreak[J].
+\newblock IEEE Transactions on Power Electronics, 2022, 37\penalty0 (12): 14028-14033.
+\newblock DOI: \doi{10.1109/TPEL.2022.3194518}.
+
+\bibitem[Ma\ et~al.(2021)Ma, Liu, Kong, and Lee]{Ma2021}
+MA L, LIU X, KONG X, et~al.
+\newblock Iterative learning model predictive control based on iterative data-driven modeling\allowbreak[J].
+\newblock IEEE Transactions on Neural Networks and Learning Systems, 2021, 32\penalty0 (8): 3377-3390.
+\newblock DOI: \doi{10.1109/TNNLS.2020.3016295}.
+
+\bibitem[Yang\ et~al.(2009)Yang, Li, and Gao]{Yang2009}
+YANG L, LI K, GAO Z.
+\newblock Train timetable problem on a single-line railway with fuzzy passenger demand\allowbreak[J].
+\newblock IEEE Transactions on Fuzzy Systems, 2009, 17\penalty0 (3): 617-629.
+\newblock DOI: \doi{10.1109/TFUZZ.2008.924198}.
+
+\bibitem[Wang\ et~al.(2020)Wang, Mu, Li, Jia, Li, Shi, and Jiang]{Wang2020}
+WANG M, MU Y, LI F, et~al.
+\newblock State space model of aggregated electric vehicles for frequency regulation\allowbreak[J].
+\newblock IEEE Transactions on Smart Grid, 2020, 11\penalty0 (2): 981-994.
+\newblock DOI: \doi{10.1109/tsg.2019.2929052}.
+
+\bibitem[Precup\ et~al.(2008)Precup, Preitl, Tar, Tomescu, Takacs, Korondi, and Baranyi]{Precup2008}
+PRECUP R~E, PREITL S, TAR J~K, et~al.
+\newblock Fuzzy control system performance enhancement by iterative learning control\allowbreak[J].
+\newblock IEEE Transactions on Industrial Electronics, 2008, 55\penalty0 (9): 3461-3475.
+\newblock DOI: \doi{10.1109/TIE.2008.925322}.
+
+\bibitem[Wang\ et~al.(2004)Wang, Chien, and Teng]{wang2004direct}
+WANG Y~C, CHIEN C~J, TENG C~C.
+\newblock Direct adaptive iterative learning control of nonlinear systems using an output-recurrent fuzzy neural network\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), 2004, 34\penalty0 (3): 1348-1359.
+
+\bibitem[Chien(2008)]{chien2008combined}
+CHIEN C~J.
+\newblock A combined adaptive law for fuzzy iterative learning control of nonlinear systems with varying control tasks\allowbreak[J].
+\newblock IEEE Transactions on Fuzzy Systems, 2008, 16\penalty0 (1): 40-51.
+
+\bibitem[Han\ et~al.(2023)Han, Wang, Sun, Yang, and Qiao]{han2023iterative}
+HAN H~G, WANG C~Y, SUN H~Y, et~al.
+\newblock Iterative learning model predictive control with fuzzy neural network for nonlinear systems\allowbreak[J].
+\newblock IEEE Transactions on Fuzzy Systems, 2023, 31\penalty0 (9): 3220-3234.
+
+\bibitem[Kang\ et~al.(2024)Kang, Cui, Dai, Zhao, Hu, and Chai]{Kang2024}
+KANG J, CUI D, DAI X, et~al.
+\newblock State-space modeling and feedback control for real-time automatic train timetable rescheduling of intercity hsrs\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2024: 1-15.
+\newblock DOI: \doi{10.1109/TITS.2024.3395055}.
+
+\bibitem[Han\ et~al.(2021)Han, Han, Li, Ning, Yang, and Yin]{Han2021}
+HAN Z, HAN B, LI D, et~al.
+\newblock Train timetabling in rail transit network under uncertain and dynamic demand using advanced and adaptive nsga-ii\allowbreak[J/OL].
+\newblock Transportation Research Part B: Methodological, 2021, 154: 65-99.
+\newblock \url{https://www.sciencedirect.com/science/article/pii/S0191261521001867}.
+\newblock DOI: \doi{https://doi.org/10.1016/j.trb.2021.10.002}.
+
+\bibitem[Gupta\ et~al.(2016)Gupta, Tobin, and Pavel]{Gupta2016}
+GUPTA S~D, TOBIN J~K, PAVEL L.
+\newblock A two-step linear programming model for energy-efficient timetables in metro railway networks\allowbreak[J/OL].
+\newblock Transportation Research Part B: Methodological, 2016, 93: 57-74.
+\newblock \url{https://www.sciencedirect.com/science/article/pii/S0191261516304830}.
+\newblock DOI: \doi{https://doi.org/10.1016/j.trb.2016.07.003}.
+
+\bibitem[Li\ et~al.(2016{\natexlab{b}})Li, De~Schutter, Yang, and Gao]{Li2016a}
+LI S, DE~SCHUTTER B, YANG L, et~al.
+\newblock Robust model predictive control for train regulation in underground railway transportation\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2016, 24\penalty0 (3): 1075-1083.
+\newblock DOI: \doi{10.1109/tcst.2015.2480839}.
+
+\end{thebibliography}

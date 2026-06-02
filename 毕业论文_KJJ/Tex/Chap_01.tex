@@ -1,0 +1,113 @@
+\chapter{符号和缩写说明}\label{01}
+
+本文的各章节中存在部分通用符号，如无特殊说明，其符号的含义如下表 \ref{symbol} 所示。
+
+\begin{table}[htpb]
+\begin{center}
+\bicaption{符号及意义}{Symbols and definitions }
+\begin{tabular}{l@{\hspace{30pt}}l}
+\hline  符号 & 物理意义 \\
+\hline
+\multicolumn{2}{c}{\textbf{基本数学符号}} \\
+\hline
+$P^{\top}$ & 矩阵 $P$ 的转置 \\
+$P^{-1}$ & 矩阵 $P$ 的逆 \\
+$\|x\|$ & 向量 $x$ 的欧几里得范数 \\
+$\|G(z)\|_{\infty}$ & 传递函数矩阵 $G(z)$ 的 $H_{\infty}$ 范数 \\
+$\mathbb{R}^{n}$ & $n$ 维欧式空间 \\
+$\mathbb{R}^{n\times m}$ & $n\times m$ 维实数矩阵 \\
+$\operatorname{diag}(\cdot)$ & 以输入元素构成的对角矩阵 \\
+$I_n$ & $n$ 阶单位矩阵 \\
+$0_{m,n}$ & $m\times n$ 维零矩阵 \\
+$\oplus$ & Minkowski 和 \\
+$\ominus$ & Pontryagin 差 \\
+\hline
+\multicolumn{2}{c}{\textbf{系统参数}} \\
+\hline
+$M$ & 线路上运行的列车总数 \\
+$N$ & 沿线车站总数 \\
+$H$ & 相邻列车的标称发车间隔（追踪间隔）\\
+$S$ & 列车在车站的最小停站时间 \\
+$R_{k}$ & 从车站 $k$ 至车站 $k+1$ 的计划运行时间 \\
+$c$ / $c_{k}$ & 车站 $k$ 的客流延误率，表示发车间隔对停站时间的影响程度 \\
+$a$ / $\beta$ & 单位乘客平均乘降时间影响系数（第3章用 $a$，第5章用 $\beta$）\\
+$\delta_{k}$ / $\phi_{k}$ & 车站 $k$ 的平均客流量（第3章用 $\delta_k$，第5章用 $\phi_k$）\\
+\hline
+\multicolumn{2}{c}{\textbf{列车运行变量}} \\
+\hline
+$t_{k}^{i}$ & 列车 $i$ 在车站 $k$ 的实际发车时刻 \\
+$T_{k}^{i}$ & 列车 $i$ 在车站 $k$ 的计划发车时刻 \\
+$r_{k}^{i}$ & 列车 $i$ 从车站 $k$ 至车站 $k+1$ 的实际运行时间 \\
+$s_{k}^{i}$ & 列车 $i$ 在车站 $k$ 的实际停站时间 \\
+$x_{k}^{i}$ & 列车 $i$ 在车站 $k$ 的实际发车时刻与计划发车时刻的偏差（发车延误），$x_{k}^{i}=t_{k}^{i}-T_{k}^{i}$ \\
+$y_{k}^{i}$ & 列车 $i$ 与列车 $i-1$ 在车站 $k$ 的发车间隔相对于标称值 $H$ 的偏差，$y_{k}^{i}=t_{k}^{i}-t_{k}^{i-1}-H$ \\
+$u_{k}^{i}$ & 对列车 $i$ 在区间 $k$ 至 $k+1$ 的运行时间施加的重调度调整量 \\
+${w_1}_{k}^{i}$ & 列车 $i$ 在区间 $k$ 至 $k+1$ 的运行时间扰动项 \\
+${w_2}_{k}^{i}$ & 列车 $i$ 在车站 $k$ 的停站时间扰动项 \\
+$w_{k}^{i}$ & 总扰动项，$w_{k}^{i}={w_1}_{k}^{i}+{w_2}_{k+1}^{i}$ \\
+$\delta u_{k}^{i}$ & 相邻列车控制量之差，$\delta u_{k}^{i}=u_{k}^{i}-u_{k}^{i-1}$ \\
+$\delta w_{k}^{i}$ & 相邻列车扰动之差，$\delta w_{k}^{i}=w_{k}^{i}-w_{k}^{i-1}$ \\
+\hline
+\multicolumn{2}{c}{\textbf{状态空间模型}} \\
+\hline
+$X_{k}^{i}$ & $M$ 维状态向量，表征所有列车在各车站的发车延误 \\
+$U_{k}^{i}$ & $N$ 维控制向量 \\
+$W_{k}^{i}$ & $N$ 维扰动向量 \\
+$Y_{k}^{i}$ & 面向规律发车间隔模型的$M$维状态向量 \\
+$\overline{U}_{k}^{i}$ & $M$ 维增广控制向量 \\
+$\overline{W}_{k}^{i}$ & $M$ 维增广扰动向量 \\
+$A$, $A_L$ & 系统状态转移矩阵（$M\times M$）\\
+$B$, $B_L$ & 系统控制/扰动输入矩阵（$M\times N$）\\
+$D_{1}(a,b)$ & $M\times M$ 变换矩阵，用于描述列车延误演化特性 \\
+$D_{2}(a)$ & $M\times N$ 变换矩阵，用于描述控制与扰动输入的特性 \\
+$S_{M}$ & $M\times M$ 循环置换矩阵 \\
+\hline
+\multicolumn{2}{c}{\textbf{控制与优化}} \\
+\hline
+$Q$, $R$ & 二次型目标函数中的加权矩阵 \\
+$p$, $q$ & 加权矩阵中的标量权值参数 \\
+$K(i)$ & 状态反馈控制增益矩阵（$N\times M$）\\
+$\Gamma$ & $H_{\infty}$ 鲁棒扰动抑制水平 \\
+$p$ & 模型预测控制的预测时域 \\
+$m$ & 模型预测控制的控制时域 \\
+$k$ & 迭代学习控制的批次编号 \\
+$\Delta U_{k}$ & 相邻批次控制量之差，$\Delta U_k = U_k - U_{k-1}$ \\
+$\Delta W_{k}$ & 相邻批次扰动之差 \\
+$\Delta X_{k}$ & 相邻批次状态偏差之差 \\
+$b_d$ & 相邻批次间扰动变化的有界上界 \\
+\hline
+\multicolumn{2}{c}{\textbf{性能指标}} \\
+\hline
+$\prod_{j}$ & 运行质量指数（OQI），用于衡量时刻表恢复效果 \\
+$\sigma_{j}$ & 发车间隔规律性指数，用于衡量发车间隔均一性 \\
+$J_1^{k}$ & 名义时刻表恢复控制器的目标函数 \\
+$J_2^{k}$ & 规律发车间隔控制器的目标函数 \\
+$G$ & 鲁棒MPC中的累计代价函数 \\
+\hline
+\multicolumn{2}{c}{\textbf{模糊控制系统（第5章）}} \\
+\hline
+$L$ & 模糊规则总数 \\
+$h_l(v)$ & 第 $l$ 条模糊规则的归一化激活强度 \\
+$A_l$, $B_l$, $D_l$ & 第 $l$ 个局部模糊子系统的系统矩阵 \\
+$M_{ln}$ & 第 $l$ 条规则中第 $n$ 个前提变量的模糊隶属集 \\
+\hline
+\multicolumn{2}{c}{\textbf{缩写}} \\
+\hline
+IHSR & 城际高速铁路 (Intercity High-Speed Railway)\\
+OQI & 运行质量指数 (Operation Quality Index)\\
+FCFS & 先到先服务 (First Come First Served)\\
+MIP & 混合整数规划 (Mixed Integer Programming)\\
+MPC & 模型预测控制 (Model Predictive Control)\\
+RMPC & 鲁棒模型预测控制 (Robust Model Predictive Control)\\
+ILC & 迭代学习控制 (Iterative Learning Control)\\
+IL-MPC & 迭代学习模型预测控制 (Iterative Learning MPC)\\
+ILFPC & 迭代学习模糊预测控制 (Iterative Learning Fuzzy Predictive Control)\\
+LMI & 线性矩阵不等式 (Linear Matrix Inequality)\\
+T-S & Takagi–Sugeno 模糊模型 \\
+PDC & 平行分布补偿 (Parallel Distributed Compensation)\\
+\hline
+\end{tabular}\label{symbol}
+\end{center}
+\end{table}
+
+\textbf{符号说明：} 除另有说明，上标 $i$ 表示列车编号（$1 \leq i \leq M$），下标 $k$ 表示车站编号（$1 \leq k \leq N$）。由于城际高铁环形线路的周期性，列车编号与车站编号分别对 $M$ 和 $N$ 取模：列车 $M$ 之后为列车 $1$，车站 $N$ 之后为车站 $1$。第4章采用下标 $j$ 替代 $k$ 表示车站编号，含义相同。

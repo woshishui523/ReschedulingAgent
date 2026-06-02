@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>列车晚点智能调度系统</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 50%, #0d1b2a 100%);
+    min-height: 100vh;
+    color: #e0e0e0;
+  }
+  .header {
+    background: linear-gradient(90deg, #1a3a5c, #1e4d7b, #1a3a5c);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 2px solid #2d6fa8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .header h1 { font-size: 22px; font-weight: 600; letter-spacing: 2px; }
+  .header .badge {
+    background: #e67e22;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .panel {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .panel h2 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label {
+    font-size: 13px;
+    color: #8ab4d6;
+    font-weight: 500;
+  }
+  .form-group input, .form-group textarea {
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.15);
+  }
+  .form-group textarea { resize: vertical; min-height: 70px; }
+  .btn-row { display: flex; gap: 12px; margin-top: 20px; }
+  .btn {
+    padding: 11px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(52,152,219,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(52,152,219,0.4); }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .btn-secondary {
+    background: rgba(255,255,255,0.08);
+    color: #ccc;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.14); }
+  .result-area {
+    min-height: 80px;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    display: none;
+  }
+  .result-area.show { display: block; }
+  .diagram-container {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .diagram-container h3 {
+    font-size: 14px;
+    color: #8ab4d6;
+    margin-bottom: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  }
+  .diagram-container img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .loading-spinner {
+    display: none;
+    width: 20px; height: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .history-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.06);
+    color: #8ab4d6;
+    font-weight: 500;
+  }
+  .history-table td {
+    padding: 10px 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .history-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .tag-warn { background: rgba(230,126,34,0.2); color: #f0a04b; }
+  .tag-info { background: rgba(52,152,219,0.2); color: #6bb3e0; }
+  .empty-state { text-align: center; padding: 40px; color: #666; }
+  .formula-bar {
+    background: rgba(52,152,219,0.08);
+    border: 1px solid rgba(52,152,219,0.2);
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin-top: 16px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
+    color: #6bb3e0;
+    text-align: center;
+  }
+  .two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+  @media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } }
+  .toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+    display: none;
+  }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  .toast-error { background: #c0392b; }
+  .toast-success { background: #27ae60; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚄 列车晚点智能调度系统</h1>
+  <span class="badge">AI 驱动</span>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="container">
+  <div class="two-col">
+    <div>
+      <!-- 输入面板 -->
+      <div class="panel">
+        <h2>📝 调度员输入</h2>
+        <div class="form-group full">
+          <label>自然语言描述（推荐）</label>
+          <textarea id="naturalInput" placeholder="例如：C2503 次列车在北京南站因设备故障晚点 5 分钟"></textarea>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>车次号（可选，从描述中提取）</label>
+            <input id="trainNumber" placeholder="C2503" />
+          </div>
+          <div class="form-group">
+            <label>车站名称（可选）</label>
+            <input id="stationName" placeholder="北京南站" />
+          </div>
+          <div class="form-group">
+            <label>晚点分钟数（可选）</label>
+            <input id="delayMinutes" type="number" placeholder="5" />
+          </div>
+          <div class="form-group">
+            <label>晚点原因（可选）</label>
+            <input id="delayReason" placeholder="设备故障" />
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="dispatchBtn" onclick="submitDispatch()">
+            <span id="btnText">⚡ 生成调度命令</span>
+            <div class="loading-spinner" id="spinner"></div>
+          </button>
+          <button class="btn btn-secondary" onclick="clearForm()">清空</button>
+          <button class="btn btn-secondary" onclick="loadExample(0)">示例</button>
+        </div>
+        <div class="formula-bar">
+          三算法自适应：反馈控制（紧急）| ILC迭代学习（客流突变）| RMPC鲁棒预测（常规）
+          &nbsp;|&nbsp; 模糊客流推理 + LLM语义解析 → 区间运行时间调整
+        </div>
+      </div>
+
+      <!-- 结果面板 -->
+      <div class="panel">
+        <h2>📋 调度命令输出</h2>
+        <div class="result-area" id="resultArea"></div>
+        <div class="empty-state" id="emptyResult">等待输入晚点信息...</div>
+      </div>
+    </div>
+
+    <!-- 历史记录 -->
+    <div class="panel" style="max-height: 650px; overflow-y: auto;">
+      <h2>📜 历史记录</h2>
+      <table class="history-table" id="historyTable">
+        <thead>
+          <tr><th>车次</th><th>车站</th><th>调整量</th><th>时间</th></tr>
+        </thead>
+        <tbody id="historyBody">
+          <tr><td colspan="4" class="empty-state">暂无记录</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const examples = [
+  "C2503 次列车在北京南站因设备故障晚点 5 分钟",
+  "紧急！C2501 次列车在天津站因信号故障晚点 8 分钟，需要立即处理",
+  "由于客流突变，C2507 次列车在塘沽站晚点 10 分钟",
+  "C2502 次列车在武清站因天气原因晚点 3 分钟"
+];
+
+let exampleIdx = 0;
+
+function loadExample(idx) {
+  document.getElementById('naturalInput').value = examples[idx % examples.length];
+  document.getElementById('trainNumber').value = '';
+  document.getElementById('stationName').value = '';
+  document.getElementById('delayMinutes').value = '';
+  document.getElementById('delayReason').value = '';
+  exampleIdx = (idx + 1) % examples.length;
+}
+
+async function submitDispatch() {
+  const naturalInput = document.getElementById('naturalInput').value.trim();
+  const trainNumber = document.getElementById('trainNumber').value.trim();
+  const stationName = document.getElementById('stationName').value.trim();
+  const delayMinutes = document.getElementById('delayMinutes').value.trim();
+  const delayReason = document.getElementById('delayReason').value.trim();
+
+  let text = naturalInput;
+  if (!text && trainNumber && stationName && delayMinutes) {
+    text = `${trainNumber} 次列车在${stationName}因${delayReason || '未知原因'}晚点 ${delayMinutes} 分钟`;
+  }
+
+  if (!text) {
+    showToast('请填写晚点描述或结构化信息', 'error');
+    return;
+  }
+
+  const btn = document.getElementById('dispatchBtn');
+  const spinner = document.getElementById('spinner');
+  const btnText = document.getElementById('btnText');
+  btn.disabled = true;
+  btnText.style.display = 'none';
+  spinner.style.display = 'inline-block';
+
+  document.getElementById('emptyResult').style.display = 'none';
+  const resultArea = document.getElementById('resultArea');
+  resultArea.classList.remove('show');
+  resultArea.textContent = '正在处理...';
+
+  try {
+    const res = await fetch('/api/dispatch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || '调度处理失败');
+    }
+
+    const data = await res.json();
+    let html = data.command.replace(/\n/g, '<br>');
+    if (data.diagram_url) {
+      html += `<div class="diagram-container">
+        <h3>📈 列车运行图</h3>
+        <img src="${data.diagram_url}" alt="列车运行图" onerror="this.parentElement.style.display='none'" />
+      </div>`;
+    }
+    resultArea.innerHTML = html;
+    resultArea.classList.add('show');
+    showToast('调度命令生成成功', 'success');
+    loadHistory();
+  } catch (e) {
+    resultArea.textContent = '❌ 错误：' + e.message;
+    resultArea.classList.add('show');
+    showToast(e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btnText.style.display = 'inline';
+    spinner.style.display = 'none';
+  }
+}
+
+function clearForm() {
+  document.getElementById('naturalInput').value = '';
+  document.getElementById('trainNumber').value = '';
+  document.getElementById('stationName').value = '';
+  document.getElementById('delayMinutes').value = '';
+  document.getElementById('delayReason').value = '';
+  document.getElementById('resultArea').classList.remove('show');
+  document.getElementById('emptyResult').style.display = 'block';
+}
+
+async function loadHistory() {
+  try {
+    const res = await fetch('/api/history?limit=50');
+    const data = await res.json();
+    const tbody = document.getElementById('historyBody');
+
+    if (!data.items || data.items.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4" class="empty-state">暂无记录</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.items.map(r => `
+      <tr>
+        <td><strong>${esc(r.train_number)}</strong></td>
+        <td>${esc(r.station_name)}</td>
+        <td><span class="tag ${r.adjustment_value > 5 ? 'tag-warn' : 'tag-info'}">${r.adjustment_value} 分钟</span></td>
+        <td style="color:#888">${r.created_at ? new Date(r.created_at).toLocaleString('zh-CN') : '-'}</td>
+      </tr>
+    `).join('');
+  } catch (e) {
+    console.error('加载历史失败:', e);
+  }
+}
+
+function esc(s) {
+  const el = document.createElement('span');
+  el.textContent = s || '';
+  return el.innerHTML;
+}
+
+function showToast(msg, type) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = 'toast toast-' + type;
+  toast.style.display = 'block';
+  setTimeout(() => { toast.style.display = 'none'; }, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadHistory();
+  document.getElementById('naturalInput').addEventListener('keydown', e => {
+    if (e.ctrlKey && e.key === 'Enter') submitDispatch();
+  });
+});
+</script>
+</body>
+</html>

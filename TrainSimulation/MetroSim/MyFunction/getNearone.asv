@@ -1,0 +1,27 @@
+function y=getNearone(num,Tr,Plat)
+%寻找最近的车站
+max=abs(Tr.TrX(num)-Plat.Distance);
+nearone=Plat.N;
+for i=2:Plat.N
+    now=abs(Tr.TrX(num)-Plat.PlatX(i));
+    if now<max
+        max=now;
+        nearone=i;
+    end
+end
+y=Plat
+a=abs(Tr.TrX(num)-Plat.Distance);
+b=abs(Tr.TrX(num)-Plat.PlatX(2));
+c=abs(Tr.TrX(num)-Plat.PlatX(3));
+if a<b&&a<c
+    y=Plat.Distance;
+end
+
+if b<a&&b<c
+    y=Plat.PlatX(2);
+end
+
+if c<a&&c<b
+    y=Plat.PlatX(3);
+end
+

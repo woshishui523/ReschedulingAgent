@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n 'e_{j}\\\\|E_{j}\\\\|E_k\\\\|z_{j}\\\\|z_1\\\\|z_N\\\\|\\\\\\\\hat{E}\\\\|\\\\\\\\Delta E' \"Tex/Chap_05.tex\")",
+      "Bash(python fix_symbols.py)",
+      "Bash(grep -n 'e_{j\\\\| E_k\\\\|E_k\\(\\\\|z_{j\\\\|z_1\\\\|z_N\\\\|\\\\\\\\hat{E}\\\\|\\\\\\\\Delta E\\\\|E_{j}\\\\|E_{k}\\\\| E_1 \\\\|E_k ' \"Tex/Chap_05.tex\")",
+      "Bash(grep -n 'z_{j\\\\|\\\\\\\\hat{E}\\\\|\\\\\\\\Delta E_k\\\\| E_k \\\\|e_{j\\\\|E_{j}\\\\|E_{k}\\\\|E_{k-' \"Tex/Chap_05.tex\")",
+      "Bash(grep -n 'e_{j\\\\|e_j\\\\^\\\\| E_k\\\\|E_k\\(\\\\|z_{j\\\\|z_1\\\\|z_N\\\\|\\\\\\\\hat{E}\\\\|\\\\\\\\Delta E\\\\|E_{j}\\\\|E_{k}\\\\|E_{k-' \"Tex/Chap_05.tex\")",
+      "Bash(grep -n '\\\\$E_\\\\|\\\\\\\\Delta E\\\\|\\\\\\\\hat{E}\\\\|e_{j\\\\| E_k \\\\|E_k\\\\$\\\\|E_k\\\\\\\\|E_{j\\\\|z_{j' Tex/Chap_05.tex)",
+      "Bash(grep -n '\\\\$E_\\\\|\\\\\\\\hat{E}\\\\|e_{j}\\\\|e_j\\\\^' Tex/Chap_05.tex)"
+    ]
+  }
+}

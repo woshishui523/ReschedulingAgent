@@ -1,63 +1,78 @@
-from agent.dispatch_agent import create_dispatch_agent
-import json
-from algorithms.rescheduler import compute_reschedule
-
-from tools.generate_dispatch_command import generate_dispatch_command
-from services.db_service import get_all_delay_records
-from config.database import SessionLocal
-from models.delay_record import DelayRecord
-from sqlalchemy import text
+from tools.nlp_parser_tool import parse_dispatch_text
+from services.unified_dispatch_service import unified_process_delay
 
 
-def main():
-    print("🚄 智能调度系统启动...")
+def dispatch_input_processor(dispatch_text: str) -> str:
+    """
+    调度员输入处理函数
 
-    while True:
-        user_input = input("调度员输入：")
-        if user_input == "exit":
-            break
+    流程：
+    1. 使用 LLM 解析自然语言输入
+    2. 提取结构化数据
+    3. 意图分析 → 三算法选择（反馈控制/ILC/RMPC）
+    4. 执行选定算法
+    5. 返回区间运行时间调整调度命令
 
-        # 从数据库读取最新的晚点记录
-        db = SessionLocal()
-        try:
-            # 查询最新的晚点记录（按 delay_id 降序排列，取第一条）
-            sql = text("""
-                SELECT dr.*, s.station_name, dr.is_urgent
-                FROM delay_records dr
-                LEFT JOIN stations s ON dr.station_id = s.station_id
-                ORDER BY dr.delay_id DESC
-                LIMIT 1
-            """)
-            result = db.execute(sql).fetchone()
-            
-            if result:
-                # 构建结构化数据
-                structured_data = {
-                    "train_number": str(result.train_id),  # 如果有 trains 表，可以关联查询车次号
-                    "station_name": result.station_name if result.station_name else f"车站_{result.station_id}",
-                    "delay_duration": result.delay_duration,
-                    "is_urgent": result.is_urgent if hasattr(result, 'is_urgent') and result.is_urgent is not None else 0
-                }
-                
-                print(f"\n从数据库读取到以下信息:")
-                print(f"  列车 ID: {result.train_id}")
-                print(f"  车站 ID: {result.station_id}")
-                print(f"  车站名称：{result.station_name}")
-                print(f"  晚点时长：{result.delay_duration} 分钟")
-                print(f"  紧急程度：{result.is_urgent if hasattr(result, 'is_urgent') else '无此字段'}")
-                print(f"  晚点原因：{result.delay_reason}")
-                
-                # 调用调度命令生成函数
-                dispatch_command = generate_dispatch_command(structured_data)
-                
-                # 输出调度命令
-                print("\n生成的调度命令：")
-                print(dispatch_command)
-            else:
-                print("⚠️  数据库中没有晚点记录")
-                
-        finally:
-            db.close()
+    参数:
+        dispatch_text: 调度员的口头描述或文本输入
+
+    返回:
+        生成的调度命令字符串
+    """
+    print("=" * 60)
+    print("Train Delay Intelligent Rescheduling System")
+    print("=" * 60)
+    print("\nSupported algorithms:")
+    print("   * Feedback Control (urgent)")
+    print("   * ILC (passenger surge)")
+    print("   * RMPC (regular)")
+    print("=" * 60)
+
+    # Step 1: LLM parsing
+    print("\nStep 1: Parsing dispatcher input...")
+    print(f"   Input: {dispatch_text}")
+
+    parsed_data = parse_dispatch_text(dispatch_text)
+
+    if "error" in parsed_data:
+        print(f"\nParse failed: {parsed_data['error']}")
+        raise ValueError("Cannot parse dispatcher input, check format")
+
+    print("\nParse succeeded! Extracted info:")
+    for key, value in parsed_data.items():
+        print(f"   * {key}: {value}")
+
+    # Step 2: Unified dispatch (three algorithms)
+    print("\nStep 2: Intent analysis + algorithm selection + computation...")
+
+    try:
+        command, diagram_path = unified_process_delay(
+            target_train_number=parsed_data["train_number"],
+            target_station_name=parsed_data["station_name"],
+            delay_minutes=parsed_data["delay_duration"],
+            reason_text=parsed_data["delay_reason"],
+            original_text=dispatch_text,
+        )
+
+        print("\nProcessing done!")
+        print("\n" + "=" * 60)
+        print("Generated dispatch command:")
+        print("=" * 60)
+        print(command)
+        print("=" * 60)
+
+        return command
+
+    except ValueError as e:
+        print(f"\nProcessing failed: {e}")
+        raise e
+
 
 if __name__ == "__main__":
-    main()
+    dispatch_input = "C2503 次列车在北京南站因设备故障晚点 5 分钟"
+
+    try:
+        result = dispatch_input_processor(dispatch_input)
+        print("\nDispatch command generated and saved!")
+    except Exception as e:
+        print(f"\nSystem error: {e}")
